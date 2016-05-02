@@ -34,11 +34,26 @@ position: absolute;
 margin-top:12%;
 margin-left: 60%;
 max-width:960px;
+
+}
+h1,h2{
+letter-spacing: 6px;
+
 }
 
-
-h1, h2, h3 {
-
+h1:hover {
+	color:red;
 	
 }
+
+h2:hover {
+	color:red;
+}
+
+th { 
+	text-decoration: underline;
+
+}
+tr:nth-child(even) {background-color: #f2f2f2
+
 }
