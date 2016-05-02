@@ -14,8 +14,21 @@ border: 3px groove;
 margin: 4% 2%;
 font-style: italic;
 }
+
 ul {
 list-style-type:circle;
+
+}
+#main {	
+	position:absolute
+
+}
+header {
+
+border: 3px groove;
+position: absolute;
+margin-top:10%;
+margin-left: 60%;
 
 
 }
