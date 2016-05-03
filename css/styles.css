@@ -1,0 +1,44 @@
+body {
+background-color:silver;
+font-size: 16px;
+font-family: "Times New Roman", Georgia, Serif;
+max-width:960px;
+height:auto;
+display:inline-block;
+
+}
+
+div.section {
+
+width:50%;
+height:auto;
+background-color: lightblue;
+padding: 15px 10px;
+border: 3px groove;
+margin: 4% 2%;
+font-style: italic;
+}
+
+ul {
+list-style-type:circle;
+
+}
+#main {	
+	position:absolute
+
+}
+header {
+
+border: 3px groove;
+position: absolute;
+margin-top:12%;
+margin-left: 60%;
+max-width:960px;
+}
+
+
+h1, h2, h3 {
+
+	
+}
+}

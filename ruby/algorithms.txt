@@ -1,0 +1,68 @@
+DO THE THING: Elevator Algorithm.
+face forward toward door
+find panel of buttons on wall
+check memory for floor you were asked to go to
+scan panel to locate button with correspondng numeric floor label 
+use robot digit to press corresponding button 
+make sure button illuminates
+do not panic when doors close
+do not panic when elevator begins to ascend or descend.
+look above elevator door for floor indicator.  If no indicator,watch panel
+upon arrival at floor, button will lose illumination.  door will open.
+exit elevator.
+
+DO THE THING RELEASE 1
+Give baby a bath
+Input: Dirty baby
+Output: Clean baby
+Steps
+Gather equipment:
+	baby bathtub
+	all in one baby wash
+	small 6 oz cup
+	baby washcloth
+	hooded baby towel
+	baby floating toy
+Place bath inside tub
+Turn on hot and cold water taps
+Adjust taps until water is just above room temperature
+Place baby bathtub under water spout
+Fill bath halfway
+Turn off taps
+Place equipment within half an arms length.
+Go get naked baby
+Keep the baby upright, cradled and supported by your arms
+Lower baby into bath, keeping head above water, and body supported by your arm and the tub.
+Maintain support of baby with one arm throughout the bathing process.
+With your free hand grab the all in one baby wash.  
+Squirt a dime size amount on your wash cloth.  
+Use that washcloth to gently massage the back of the baby's heads with suds.
+Move to top of the head
+Stay away from the front of the head and the baby's eyes.
+Put down wash cloth.
+Take small cup.
+Use one hand to tilt back baby's head.
+Eyes should point to ceiling.
+Use your other hand to fill the small cup half full with water from the bath.
+Gently pour the water so that it travels from baby's elevated forehead down the back of it's head and rinses the suds into the bath.
+Put another dime size amount of all in one wash on the wash cloth.  Start at the neck and gently massage suds on teh baby's skin.
+Work the washcloth down the baby's body
+Wash each body part until you reach the feet.
+Put down the washcloth.
+Lap gentle waves of water across the baby's body.  
+Do not splash water on the baby's face.  
+Reach for hooded towel with your free arm.
+Lay it out to receive baby.
+Return arm to scoop up the baby in both arms.
+ Cradle the baby's head and gently position it on the hood of the towel.
+ fold the rest of the towel around the baby to dry the skin.
+ Scoop the bundled baby up into your arm.
+
+ 
+
+
+
+
+
+
+
