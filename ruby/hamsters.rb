@@ -32,8 +32,8 @@ else
 	puts "Thank you for that information!"
 end
 
-puts "Welcome to the hamster hotel #{name}!"
-puts "Volume level: #{volume_level}"
-puts "Age: #{age}"
-puts "Fur color: #{color}"
-puts "Ready for adoption?: #{good_candidate}"
+#puts "Welcome to the hamster hotel #{name}!"
+#puts "Volume level: #{volume_level}"
+#puts "Age: #{age}"
+#puts "Fur color: #{color}"
+#puts "Ready for adoption?: #{good_candidate}"
