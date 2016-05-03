@@ -19,15 +19,18 @@ lunch = gets.chomp
 puts "Enrollment in our health plan is optional.  Shall we enroll you? (yes/no)"
 health_plan = gets.chomp
 
+current_year = 2016.to_i\
 #RESULTS:
 #If employee age == calculation of age from birth year && they order garlic bread || sign up for insurance.
 #Printed result: NOT a vampire
 
-current_year = 2016.to_i
+if 
+	age == current_year - birth_year && lunch == "yes" || health_plan == "yes"
+	puts "Candidate is probably NOT a vampire"
 
-if
+else
 	age != current_year - birth_year && lunch == "no" || health_plan == "yes"
-	puts "Candidate is a vampire"
+	puts "Candidate is probably a vampire"
 	
 end
 #
