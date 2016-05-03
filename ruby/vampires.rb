@@ -25,23 +25,48 @@ current_year = 2016.to_i\
 #Printed result: NOT a vampire
 
 if 
-	age == current_year - birth_year && lunch == "yes" || health_plan == "yes"
+	 name = "Drake Cula" 
+		puts "Definitely a vampire!"
+
+	elsif name = "Tu Fang"
+		puts "Definitely a vampire!"
+
+	elsif age == current_year - birth_year && lunch == "yes" || health_plan == "yes"
+
 	puts "Candidate is probably NOT a vampire"
 
-else
-	age != current_year - birth_year && lunch == "no" || health_plan == "yes"
-	puts "Candidate is probably a vampire"
-	
-end
-#
+
+#If Employee age != birth year calculation, && hates garlic bread && does not want insurance
+#Printed result:  Almost certainly VAMPIRE
+
+	elsif
+		age != current_year - birth_year && lunch == "no" && health_plan == "no"
+		puts "Candidate is almost certainly a vampire"
+
+
 #If Employee age != birth year calculation, && hates garlic bread  || does not want insurance
 #Printed result:  Probable VAMPIRE
-#
-##If Employee age != birth year calculation, && hates garlic bread  || does not want insurance
-#Printed result:  Almost certainly VAMPIRE
+	elsif
+		age != current_year - birth_year && (lunch == "no" || health_plan == "yes")
+		puts "Candidate is probably a vampire"
+
+	elsif 
+		age != current_year - birth_year && (lunch == "yes" || health_plan == "no")
+		puts "Candidate is probably a vampire"
+
+
+
+	#else
+		#puts "Resuls Inconclusive"
+
+	
 #
 #Elsif employee puts DRAKE CULA or TU FANG 
 #Printed result is: Definitely a vampire 
 #
 #Else result : Inconclusive
+end
 #END program and puts Results inconclusive
+#
+#
+#
