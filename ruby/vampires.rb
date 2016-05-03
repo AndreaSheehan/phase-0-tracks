@@ -9,7 +9,10 @@ employees = gets.chomp.to_i
 
 
 until employees == 0
-	employees -=1
+	employees -= 1
+
+
+	
 
 	puts "Welcome! What is your name?"
 	name = gets.chomp
@@ -66,8 +69,29 @@ until employees == 0
 	else
 		puts "Results Inconclusive"
 	end
-end
-	
+# allergy filter != “sunshine,” continue the loop for as long as is needed. 
+# if allery == "sunshine" then “Probably a vampire.”
+ 	while true
+ 		puts "Please tell us any allergies, one at a time.  When you have no allergies 
+ 		to list, type:'none'"
+ 		
+ 		allergy = gets.chomp
+
+ 		if allergy == "none"
+ 			break 
+
+ 		elsif allergy == "sunshine"
+ 				puts "Probably a vampire"
+ 			break	
+ 	end 
+ end
+ 
+ 	
+
+ 	puts "Actually, never mind! What do these questions have to do with anything? 
+ 	Let's all be friends."
+ 
+	end
 #
 #Elsif employee puts DRAKE CULA or TU FANG 
 #Printed result is: Definitely a vampire 
