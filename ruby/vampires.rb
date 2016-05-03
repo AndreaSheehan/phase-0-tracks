@@ -12,8 +12,6 @@ until employees == 0
 	employees -= 1
 
 
-	
-
 	puts "Welcome! What is your name?"
 	name = gets.chomp
 
@@ -85,8 +83,6 @@ until employees == 0
  			break	
  	end 
  end
- 
- 	
 
  	puts "Actually, never mind! What do these questions have to do with anything? 
  	Let's all be friends."
