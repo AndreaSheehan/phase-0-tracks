@@ -14,9 +14,9 @@ def encrypt(string)
 				string[index].next
 		end
 		index += 1
-
 	end
-	p string
+
+	return string
 end
 
 
@@ -40,16 +40,39 @@ def decrypt(string)
 		end
 			index +=1
 	end
-	p string
+	return string
 end
+	
 
 
 # Testing encrypt decrypt outputs
 # 
-encrypt("abc")
-encrypt("zed")
-decrypt("bcd")
-decrypt("afe")
-decrypt(encrypt("swordfish"))
+#encrypt("abc")
+#encrypt("zed")
+#decrypt("bcd")
+#decrypt("afe")
+#decrypt(encrypt("swordfish"))
 
+# The final nested method should first return an encrypted value for swordfish.
+# It then uses the encrypted value as the argument for the decrypt method.
+# It then will output the original string by reversing the encryption.
+# 
+# OUR DRIVER CODE
+# Ask user to choose method: decrypt or encrypt a password
+
+puts "Welcome Agent, would you like to (a) encrypt or (b) decrypt your password?"
+choice = gets.chomp
+
+# Ask for a password (string)
+puts "What is your password?"
+password = gets.chomp
+
+# Encrypt or decrypt according to preference, print result and exit.
+if choice == "a"
+	p encrypt(password)
+elsif choice == "b"
+	p decrypt(password)
+else
+	puts "You are definitely a vampire."
+end
 
