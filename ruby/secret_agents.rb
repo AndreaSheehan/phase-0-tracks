@@ -44,7 +44,6 @@ def decrypt(string)
 end
 
 
-# Testing encrypt decrypt outputs
 # 
 encrypt("abc")
 encrypt("zed")
