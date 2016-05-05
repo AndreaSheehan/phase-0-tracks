@@ -44,14 +44,12 @@ def decrypt(string)
 end
 
 
+# Testing encrypt decrypt outputs
 # 
 encrypt("abc")
 encrypt("zed")
 decrypt("bcd")
 decrypt("afe")
 decrypt(encrypt("swordfish"))
-# The final nested method should first return an encrypted value for swordfish.
-# It then uses the encrypted value as the argument for the decrypt method.
-# It then will output the original string by reversing the encryption.
 
 
