@@ -20,7 +20,13 @@ def encrypt(string)
 end
 
 
-
+#get string length
+#id first letter and then find the index of that letter in the alphabet.
+#reassign that letter in the string to alphabet[index - 1]
+#move on to the next letter until we reach the length
+#The decrypt output we want for each letter == the index of that 
+#letter from the string in the alphabet minus 1.
+			
 
 
 def decrypt(string)
