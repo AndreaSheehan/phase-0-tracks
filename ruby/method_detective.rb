@@ -4,23 +4,44 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# "iNvEsTiGaTiOn".<???>
-# => “InVeStIgAtIoN”
+"iNvEsTiGaTiOn".swapcase
 
-# "zom".<???>
+# => “InVeStIgAtIoN”
+# Correct!
+# 
+
+"zom".gsub(/o/, "oo")
+# => “zoom”
+# 
+"zom".insert(2, "o")
 # => “zoom”
 
-# "enhance".<???>
+# "enhance".insert(0, "     ", -1, "    ")
 # => "    enhance    "
+# that was not working and needs some research on how to do two arguments in here
+#
+ "enhance".center(15)
+# => "    enhance    "
+# First I guesed to get the centering right.  Then 
+# I took this sample and checked the lenght to find it was 15 characters.
 
-# "Stop! You’re under arrest!".<???>
+"Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
+# 
+"Stop! You’re under arrest!".upcase!
+# => "STOP! YOU’RE UNDER ARREST!"
+# will return nil if no changes are made.
 
-# "the usual".<???>
+"the usual".insert(-1, " suspects")
+
 #=> "the usual suspects"
+"suspects".prepend("the usual ")
 
-# " suspects".<???>
+" the usual".replace("the usual suspects")
 # => "the usual suspects"
+#
+
+# 
 
 # "The case of the disappearing last letter".<???>
 # => "The case of the disappearing last lette"
