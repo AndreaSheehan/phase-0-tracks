@@ -39,17 +39,23 @@
 
 " the usual".replace("the usual suspects")
 # => "the usual suspects"
+# 
+"the usual".concat(" suspects")
+# => "the usual suspects"
 #
 
-# 
-
-# "The case of the disappearing last letter".<???>
+"The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
-# "The mystery of the missing first letter".<???>
-# => "he mystery of the missing first letter"
+"The mystery of the missing first letter".slice!(1..39)
 
-# "Elementary,    my   dear        Watson!".<???>
+# => "he mystery of the missing first letter"
+# 
+ "The mystery of the missing first letter".delete("T")
+# => "he mystery of the missing first letter"
+# 
+
+"Elementary,    my   dear        Watson!".gsub("     my   dear        Watson!", " my dear Watson!")   
 # => "Elementary, my dear Watson!"
 
 # "z".<???>
