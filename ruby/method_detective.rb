@@ -9,12 +9,19 @@
 # => “InVeStIgAtIoN”
 # Correct!
 # 
+"mARTIan".swapcase
+# => "MartiAN"
 
 "zom".gsub(/o/, "oo")
 # => “zoom”
+"men".gsub(/e/, "ea")
+=> "mean"
 # 
 "zom".insert(2, "o")
 # => “zoom”
+# 
+"Yeh".insert(2,"a")
+=> "Yeah"
 
 # "enhance".insert(0, "     ", -1, "    ")
 # => "    enhance    "
@@ -22,8 +29,10 @@
 #
  "enhance".center(15)
 # => "    enhance    "
-# First I guesed to get the centering right.  Then 
-# I took this sample and checked the lenght to find it was 15 characters.
+# First I guesed to get the centering right.  Then I did it again below. 
+# This time, I took this sample and checked the length to find it was 15 characters.
+"marvelous".center(100)
+# "                                             marvelous                                              "
 
 "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
@@ -55,12 +64,16 @@
 # => "he mystery of the missing first letter"
 # 
 
-"Elementary,    my   dear        Watson!".gsub("     my   dear        Watson!", " my dear Watson!")   
+"Elementary,    my   dear        Watson!".gsub("    my   dear        Watson!", " my dear Watson!") 
+
 # => "Elementary, my dear Watson!"
 
-# "z".<???>
+ "z".ord
 # => 122 
-# (What is the significance of the number 122 in relation to the character z?)
-
-# "How many times does the letter 'a' appear in this string?".<???>
+# What is the significance of the number 122 in relation to the character z?)
+# 122 is the decimal output in ascii for "z"   but byte strategies were not working, 
+# so I googled a bit and learned 122 is also the ordinal for "z" 
+# https://cs.nyu.edu/courses/spring99/A22.0002.002/lecture_notes/lecture5/node16.html
+# 
+"How many times does the letter 'a' appear in this string?".count "a"
 # => 4
