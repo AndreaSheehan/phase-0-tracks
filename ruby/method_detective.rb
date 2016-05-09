@@ -37,6 +37,9 @@
 "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 # 
+"yes, this IS the answer!".upcase
+#=> "YES, THIS IS THE ANSWER!"
+# 
 "Stop! You’re under arrest!".upcase!
 # => "STOP! YOU’RE UNDER ARREST!"
 # will return nil if no changes are made.
@@ -74,6 +77,11 @@
 # 122 is the decimal output in ascii for "z"   but byte strategies were not working, 
 # so I googled a bit and learned 122 is also the ordinal for "z" 
 # https://cs.nyu.edu/courses/spring99/A22.0002.002/lecture_notes/lecture5/node16.html
-# 
+ "a".ord
+# => 97
+
 "How many times does the letter 'a' appear in this string?".count "a"
 # => 4
+# 
+ "How many times does 'i' appear in this incidental sentence?".count "i"
+ #=> 6
