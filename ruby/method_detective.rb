@@ -70,6 +70,11 @@
 "Elementary,    my   dear        Watson!".gsub("    my   dear        Watson!", " my dear Watson!") 
 
 # => "Elementary, my dear Watson!"
+# 
+"Elementary,    my   dear        Watson!".squeeze("   ")
+# => "Elementary, my dear Watson!"
+# 
+"What       insanity is         this?".squeeze("   ") 
 
  "z".ord
 # => 122 
