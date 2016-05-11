@@ -43,10 +43,16 @@ if update == "none"
 	puts "Thank you for your time!"
 
 else 
-	puts "What is the new input for #{update.to_sym}"
-end
+	puts "What is the new input for #{update}?"
 
-	p client
+	new_input = gets.chomp
+
+	client[update.to_sym] = new_input
+
+end
+p client
+
+	
 
 
 # 	 Print Hash to screen
