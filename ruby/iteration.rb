@@ -40,14 +40,19 @@ end
 #array uses number to "index" into it and ONLY numbers
 # ahash lets you use ANYTHING and not just numbesr as your index.  
 
-
+#make array of pets we own
 puts '-' * 10
 pets = ["hamster", "guinea_pig", "cat",'dog']
-puts pets[1]
+
+pets.each do |type|
+	puts "Hello #{type}!"
+end
 
 
-  
+#make array of pets we own along with corresponding names
+#  
 puts '-' * 10
+
 pets = {
 	"hamster"=>"Cocoa", 
 	"guinea_pig"=>"S'more", 
@@ -55,8 +60,11 @@ pets = {
 	"dog"=>"Muffin"
 }
 
-puts pets["hamster"]
-puts "My favorite pet name is #{pets["dog"]}"
+pets.each do |type, name|
+puts "My favorite is the #{type}"
+puts "Her name is #{name}"
+end
+puts "Heck!  They are ALL my favorites!!
 
 
 
