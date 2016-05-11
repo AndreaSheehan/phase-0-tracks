@@ -32,7 +32,10 @@ puts "List any known major client dislikes"
 client[:dislikes] = gets.chomp
 
 p client
-# 	 
+
+	 
+# 	 Provide chance to update a key. 
+ 	 
 puts "Review data. Then enter a category you would like to update: 
 name, age, children, decor, pets, dislikes.
 If no update is required type: 'none'."	 
@@ -52,12 +55,8 @@ else
 end
 p client
 
-	
-
-
-# 	 Print Hash to screen
-# 	 
-# 	 Provide chance to update a key. 
+# Print Hash to screen
+# 
 #
 #
 #
