@@ -29,14 +29,36 @@ end
 # #.split and #.map  would like to figure that part out. 
 
 
-
-
 #Release 1: Use each, map, and map!
 #Do the thing:
 #1. declare an array and a hash, and populate them with data
 #2. demonstrate iterating through each using .each, and then using .map! (modify data)
 #   note: can't call .map! on a hash
 #   Print the data structures before and after each call to demonstrate modification
+
+
+#array uses number to "index" into it and ONLY numbers
+# ahash lets you use ANYTHING and not just numbesr as your index.  
+
+
+puts '-' * 10
+pets = ["hamster", "guinea_pig", "cat",'dog']
+puts pets[1]
+
+
+  
+puts '-' * 10
+pets = {
+	"hamster"=>"Cocoa", 
+	"guinea_pig"=>"S'more", 
+	"cat"=>"Pumpkin",
+	"dog"=>"Muffin"
+}
+
+puts pets["hamster"]
+puts "My favorite pet name is #{pets["dog"]}"
+
+
 
 #Release 2: Use Documentation
 #Do the thing:
