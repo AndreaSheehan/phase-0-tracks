@@ -4,8 +4,40 @@
 # write a method that takes a block
 # your method should print a status message before & after running the block
 # array.each {|item| block} → array
+# 
+# EXAMPLE ONE
+# def attendance
+puts "reached the top"
+	yield
+puts "yadabadabing!"
+
+end
+	attendance {puts "hello!" }
+
+# EXAMPLE TWO
+def solve_quadratic
+	puts "Solving for the quadratic equation:"
+	print "a: "
+	a=gets.chomp.to_f
+	print "b: "
+	b=gets.chomp.to_f
+	print "c: "
+	c=gets.chomp.to_f
+	yield(a,b,c)
+	puts "I love math :)"
+	puts "My partner is a supergeek!"
+end
+
+solve_quadratic do |a,b,c| 
+	#x = (-b+sqrt(b^2-4*a*c))/(2*a) or x = (-b-sqrt(b^2-4*a*c))/(2*a)
+	puts "y=#{a}x^2+#{b}x+#{c}"
+	root1 = (-b+Math.sqrt(b**2-4*a*c))/(2*a)
+	root2 = (-b-Math.sqrt(b**2-4*a*c))/(2*a)
+	puts "x = #{root1} and #{root2}"
+end
 
 
+#EXAMPLE 3
 # Method allows input of multiple names and 
 # block allows it to print to a list.
 def attendance
@@ -17,8 +49,10 @@ def attendance
 		name3=gets.chomp.capitalize
 	print "More names separated by a comma:"
 	morenames=gets.chomp.capitalize
+	
 		
 yield(name1,name2,name3,*morenames)
+puts "So glad to see you all!"
 
 end
 	attendance do|name1,name2,name3,*morenames|
@@ -42,23 +76,30 @@ end
 
 #make array of pets we own.  Use. each. then .map
 puts '-' * 10
-pets = ["hamster", "guinea_pig", "cat",'dog']
 
-pets.each do |type|
-	puts "Hello #{type}!"
+pets = ["hamster", "guinea pig", "cat","dog"]
+petsCaps=[]
+
+pets.each do |animal|
+	petsCaps<<animal.capitalize
 end
+
+puts "pets: #{pets}"
+puts '_' * 10
+puts "\npetsCaps: #{petsCaps}"
 
 puts "-" *10
 
-#use map here to invoke the block for each element and create a new arrary
-#containing teh values returned by te block.
-pets = ["hamster", "guinea_pig", "cat",'dog']
+#use map here to invoke the block for each element and create a new array
+#containing the values returned by te block.
+pets = ["hamster", "guinea pig", "cat","dog"]
+p pets
 
-pets.map do |type|
-	puts "Goodbye #{type}!"
-
-	puts "Hello #{type}"
+pets.map! do |animal|
+	animal.capitalize
 end
+
+puts pets
 
 
 #make array of pets we own along with corresponding names
@@ -67,25 +108,12 @@ puts '-' * 10
 
 pets = {
 	"hamster"=>"Cocoa", 
-	"guinea_pig"=>"S'more", 
+	"guinea pig"=>"S'more", 
 	"cat"=>"Pumpkin",
 	"dog"=>"Muffin"
 }
 
 pets.each do |type, name|
-puts "My favorite is the #{type}"
-puts "Her name is #{name}"
-end
-puts "Heck!  They are ALL my favorites!!"
-
-pets = {
-	"hamster"=>"Cocoa", 
-	"guinea_pig"=>"S'more", 
-	"cat"=>"Pumpkin",
-	"dog"=>"Muffin"
-}
-
-pets.map do |type, name|
 puts "My favorite is the #{type}"
 puts "Her name is #{name}"
 end
