@@ -38,9 +38,9 @@ end
 
 
 #array uses number to "index" into it and ONLY numbers
-# ahash lets you use ANYTHING and not just numbesr as your index.  
+# ahash lets you use ANYTHING and not just numbers as your index.  
 
-#make array of pets we own
+#make array of pets we own.  Use. each. then .map
 puts '-' * 10
 pets = ["hamster", "guinea_pig", "cat",'dog']
 
@@ -48,9 +48,21 @@ pets.each do |type|
 	puts "Hello #{type}!"
 end
 
+puts "-" *10
+
+#use map here to invoke the block for each element and create a new arrary
+#containing teh values returned by te block.
+pets = ["hamster", "guinea_pig", "cat",'dog']
+
+pets.map do |type|
+	puts "Goodbye #{type}!"
+
+	puts "Hello #{type}"
+end
+
 
 #make array of pets we own along with corresponding names
-#  
+#   Use. each. then .map
 puts '-' * 10
 
 pets = {
@@ -64,7 +76,20 @@ pets.each do |type, name|
 puts "My favorite is the #{type}"
 puts "Her name is #{name}"
 end
-puts "Heck!  They are ALL my favorites!!
+puts "Heck!  They are ALL my favorites!!"
+
+pets = {
+	"hamster"=>"Cocoa", 
+	"guinea_pig"=>"S'more", 
+	"cat"=>"Pumpkin",
+	"dog"=>"Muffin"
+}
+
+pets.map do |type, name|
+puts "My favorite is the #{type}"
+puts "Her name is #{name}"
+end
+puts "Heck!  They are ALL my favorites!!"
 
 
 
