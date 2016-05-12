@@ -127,7 +127,7 @@ puts "Heck!  They are ALL my favorites!!"
 #add sample calls -- one for the array and one for the hash
 #1. iterates through the times, deleting any that meet a certain condition
 pets = ["hamster", "guinea pig", "cat","dog"]
-#remove the cat
+#array. remove the cat
 pets.delete_if{|animal| animal=="cat"}
 puts "array: #{pets}"
 
@@ -137,14 +137,61 @@ pets = {
 	"cat"=>"Pumpkin",
 	"dog"=>"Muffin"
 }
-#remove the guinea pig
+#hash.remove the guinea pig
 pets.delete_if{|animal,name| animal=="guinea pig"}
 puts "\nhash: #{pets}"
 #2. filters a data structure for only items that DO satisfy a certain condition
+#.array find the dog
+pets = ["hamster", "guinea pig", "cat","dog"]
+puts pets.select{|animal| animal=="dog"} #=> dog
+#
+#.hash
+pets = {
+	"hamster"=>"Cocoa", 
+	"guinea pig"=>"S'more", 
+	"cat"=>"Pumpkin",
+	"dog"=>"Muffin"
+}
+puts pets.select {|animal,name| animal=="cat" #=>{"cat"=>"Pumpkin"}
+
 #3. filters a data structure for ONLY items satisfying a certain condition
+pets = ["hamster", "guinea pig", "cat","dog"]
+puts pets.keep_if{|animal| animal=="dog"} #=> dog
+
+# hash
+pets = {
+	"hamster"=>"Cocoa", 
+	"guinea pig"=>"S'more", 
+	"cat"=>"Pumpkin",
+	"dog"=>"Muffin"
+}
+puts pets.keep_if{|animal,name| animal=="cat"} #=>{"cat"=>"Pumpkin"}
+
 #4. remove items from a data structure until the condion of the block evaluates false, 
 #then stops
 #
+# array 
+# 
+pets = ["hamster", "guinea pig", "cat","dog"]
+
+puts pets.drop_while {|animal| animal != "dog"} #=> dog
+
+puts "_" * 10
+
+pets = ["hamster", "cat", "guinea pig","dog"]
+
+puts "_" * 10
+
+pets = {
+	"hamster"=>"Cocoa", 
+	"guinea pig"=>"S'more", 
+	"cat"=>"Pumpkin",
+	"dog"=>"Muffin"
+}
+puts pets.reject { |animal,name| animal.length>3 }
+
+
 #
+
 #
 #
