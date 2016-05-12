@@ -126,6 +126,25 @@ puts "Heck!  They are ALL my favorites!!"
 #Use the documenttion to find other Array and Hash methods that take blocks
 #add sample calls -- one for the array and one for the hash
 #1. iterates through the times, deleting any that meet a certain condition
+pets = ["hamster", "guinea pig", "cat","dog"]
+#remove the cat
+pets.delete_if{|animal| animal=="cat"}
+puts "array: #{pets}"
+
+pets = {
+	"hamster"=>"Cocoa", 
+	"guinea pig"=>"S'more", 
+	"cat"=>"Pumpkin",
+	"dog"=>"Muffin"
+}
+#remove the guinea pig
+pets.delete_if{|animal,name| animal=="guinea pig"}
+puts "\nhash: #{pets}"
 #2. filters a data structure for only items that DO satisfy a certain condition
 #3. filters a data structure for ONLY items satisfying a certain condition
-#4. remove items from a data structure until the condion of the block evaluates false, then stops
+#4. remove items from a data structure until the condion of the block evaluates false, 
+#then stops
+#
+#
+#
+#
