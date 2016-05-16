@@ -1,5 +1,5 @@
 #class : Puppy
-#characteristics:
+#Characteristics:
 #friendly: yes
 #tail: yes
 #legs: 4
@@ -8,12 +8,14 @@
 #owner: human
 #intelligent: yes
 #size; [xsmall, small, medium, large ]
+#color: varied
 #
 #Behaviors:
 #jump
 #run
 #sleep
 #roll-over
+#fetch
 #bark
 #lick
 #eat
