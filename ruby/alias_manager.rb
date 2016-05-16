@@ -1,4 +1,12 @@
+# write a method that takes a spy's real name (e.g., "Felicia Torres") 
+# and creates a fake name with it by doing the following:
 
+#Swapping the first and last name.
+#Changing all of the vowels (a, e, i, o, or u) to the next vowel 
+#in 'aeiou', and all of the consonants 
+#(everything else besides the vowels) to the next consonant 
+#in the alphabet. So 'a' would become 'e', 'u' would become 
+#'a', and 'd' would become '
 
 
 #method I used isolates first and last name and scrambles the letters to
@@ -7,6 +15,21 @@
 #and vowels below but they don't mess anything up since they 
 #are properly defined so i left them down below 
 #
+#
+#what if i make a break it up for agent name with first , 
+#last. scramble it  and put it together 
+#as the real name 
+
+#spy_name = {
+#	first_name: "Dashiell", 
+#	last_name: "Caruso"
+#}
+
+#real_spy_name = spy_name[:first_name]+" "+ spy_name[ :last_name]
+
+#p real_spy_name
+
+#or maybe try a .shuffle on a name array
 
 
 puts '-' * 10
@@ -80,6 +103,24 @@ end
 #p mix_consonants# second version---
 
 #other ideas:
+#.include?
+#search and replace by indexing and shifting
+#
+##
+#"hello".gsub(/[aeiou]/, '*')                  #=> "h*ll*"
+#{}"hello".gsub(/([aeiou])/, '<\1>')             #=> "h<e>ll<o>"
+#{}"hello".gsub(/./) {|s| s.ord.to_s + ' '}      #=> "104 101 108 108 111 "
+#{}"hello".gsub(/(?<foo>[aeiou])/, '{\k<foo>}')  #=> "h{e}ll{o}"
+#'hello'.gsub(/[eo]/, 'e' => 3, 'o' => '*')    #=> "h3ll*"
+#
+#gsub!(pattern, replacement) → str or nil
+#gsub!(pattern) {|match| block } → str or nil
+#gsub!(pattern) → an_enumerator
+#Performs the substitutions of String#gsub in place, 
+#returning str, or nil if no substitutions were performed. 
+#If no block and no replacement is given, an enumerator is 
+#returned instead.
+#
 	
 #a = [ "a", "b", "c", "d", "e" ]
 #a.replace([ "x", "y", "z" ])   #=> ["x", "y", "z"]
