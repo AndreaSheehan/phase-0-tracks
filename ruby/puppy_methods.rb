@@ -75,8 +75,16 @@ green_ninja = Ninja.new
 
 green_ninja.juggles
 
-+ []
+army_of_the_green_ninjas = Array.new(50) { Ninja.new }
+#little_ninjas = []
+# 50.times  {little_ninjas << Ninja.new }
+ 
+army_of_the_green_ninjas.each { |ninja|
+	p ninja.juggles
+	p ninja.saves_humankind
+}
 
-
-
-
+#paired with soldiercoder.  Solution for loop:
+#army_of_the_green_ninjas = Array.new(50) { Ninja.new }
+#little_ninjas = []
+# 50.times  {little_ninjas << Ninja.new }
