@@ -70,12 +70,16 @@ class Ninja
 	end
 	
 end
-
 green_ninja = Ninja.new
 
-green_ninja.juggles
+little_ninjas = []
+50.times {little_ninjas << Ninja.new}
+little_ninjas.each do |ninja|
+	ninja.juggles
+	ninja.saves_humankind
+end
 
-+ []
+# army_of_the_green_ninjas = Array.new(50) { Ninja.new }
 
 
 
