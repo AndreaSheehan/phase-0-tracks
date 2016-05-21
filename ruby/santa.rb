@@ -4,12 +4,26 @@ class Santa
 		puts "Initializing Santa instance"
 		@gender = gender
 		@ethnicity = ethnicity
-		@reindeer_ranking =  ["Rudolph", "Dasher", "Dancer", "Prancer", 
-			"Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@reindeer_ranking =  ["Rudolph", "Dasher", "Dancer", "Prancer", 	"Vixen", "Comet","Cupid", "Donner", "Blitzen"]
 		@age = 0
 
 	end
+#this is a getter method
+	def age
+		@age
+	end
 
+#this is a getter method
+	def ethnicity
+		@ethnicity
+	end
+
+#this is a setter method
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
+	
 	def speak(n)
 		puts "Ho, ho, ho! Haaaappy holidays!"
 
@@ -21,10 +35,33 @@ class Santa
 
 
 	end
+#setter method to age santa by one year
+	def celebrate_birthday=(new_age)
+		@celebrate_birthday = new_age
+		new_age= @age +1
+			puts "Let's sing Happy Birthday!  Santa is #{new_age} years old today."
+	end
+	
+#method.  use index to move the bad reindeer to last place-rotate? 
+#select  reindeer name from list of 9 Santa is mad at.
+#move that reindeer from its current index to the last place index(8).  
 
+	def get_mad_at=(new_reindeer_ranking)
+		@get_mad_at = new_reindeer_ranking
+		puts "Is Santa mad at:Rudolph,Dasher,Dancer, Prancer, 	Vixen, Comet, Cupid, Donner, or Blitzen?"
+		victim = gets.chomp.to_s.capitalize
+		new_reindeer_ranking = reindeer_ranking.delete(victim).push(victim)
+	puts new_reindeer_ranking
 end
-
-
+		
+	#find victim in array and reassign his spot
+	
+		
+#	@reindeer_ranking.sample.1.time do [n]	
+#		puts "Santa is very mad at {@reindeer_ranking
+#.sample[n]}"
+#	end
+		
 
 
 santas = []
@@ -41,6 +78,19 @@ ethnicity_list = [
   	santas << Santa.new(facebook_gender_list[i], ethnicity_list[i])
   end
 
+santa = Santa.new(facebook_gender_list.sample, ethnicity_list.sample)
+
+santa.gets_mad_at
+
+end
+
+
+# add celebrate birthday to change Santa age by 1 year
+# get_mad_at(reindeer_name) andmove him to last place in the ranking(>rotate?)
+# @gender allows to be reassigned from outside the class
+# 
+# getter methods:  age returns @age
+# ethnicity returns@ ethnicity.
 
 #Update your Santa class with the following attributes:
 
