@@ -84,8 +84,8 @@ perfect_children.each do |child|
 
 	
 #perfect_children.each do |child|
-#	child.hug_and_kiss
-#	child.speak
+#child.hug_and_kiss
+#child.speak
 
 #child = Child.new("Asia")
 #p child
@@ -94,17 +94,16 @@ perfect_children.each do |child|
 #child.feed_pet("dog)
 #child.hug_and_kiss
 #
-#	Unexecuted idea to play with later:	
-#	def grade(age)
-#		@grade = (@age.to_i - 5)
-#		if @grade < 0 
-#			puts "You are too little. my sweet!"
-#		elsif @grade == 0
-#			puts "You are in kindergarten!"
-#		else puts "you are in #{@grade}th grade! "
-#		end
-#	end	
-	#	child.age = @age
-		#	child.eye_color = @eye_color
+#Unexecuted idea to play with later:	
+#def grade(age)
+#	@grade = (@age.to_i - 5)
+#	if @grade < 0 
+# => puts "You are too little. my sweet!"
+#	elsif @grade == 0
+#	puts "You are in kindergarten!"
+#	else puts "you are in #{@grade}th grade! "
+# end
+#end	
+
 
 
