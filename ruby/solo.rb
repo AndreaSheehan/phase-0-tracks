@@ -27,19 +27,20 @@
 # 	end
 
 class Child
-	attr_accessor :age, :eye_color, :phrase
-	attr_reader :pets 
-	def initialize
-		@hair_color = hair_color
+	attr_accessor :age, :eye_color, :name
+	attr_reader :pets, :phrase
+
+
+	def initialize(name)
+		puts "initializing child instance"
+		@name = name
 		@eye_color = eye_color
 		@age = 0
 		@birth_order = ["Asia", "Jaz", "Dash", "Jett"]
 		@temperament = "easygoing, loving, respectful, and considerate"
-	
 	end
 
-	def feeds_pets(animal)
-
+	def feed_pets(animal)
 		puts "Mommy, I fed the #{animal}"
 	
 	end
@@ -57,6 +58,11 @@ class Child
 	end
 
 
-
+child = Child.new("Asia")
+p child
+child.speak
+child.speak("I love you so much!")
+child.feed_pets("dog")
+child.hug_and_kiss
 
 
