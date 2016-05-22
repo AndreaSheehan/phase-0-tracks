@@ -27,7 +27,7 @@
 # 	end
 
 class Child
-	attr_accessor :age, :eye_color, :name, :phrase, :pets
+	attr_accessor :age, :eye_color,:name, :pets
 	attr_reader   :temperament 
 
 	def initialize(name, age, eye_color)
@@ -39,8 +39,10 @@ class Child
 		@temperament = "easygoing, loving, respectful, and considerate"
 	end
 
-	def feed_pets(pets)
-		puts "Mommy, I fed the #{pets}"
+	def feed_pets
+	#	puts "Mommy, I fed the #{pets[0]} and the #{pets[1]}"
+		puts "Mommy, I fed the #{@pets[0]} and the #{@pets[1]}"
+	
 	
 	end
 
@@ -70,8 +72,8 @@ perfect_children = []
  	puts "What color eyes would you like #{child_name} to have?"
 	child_eye_color = gets.chomp.to_s.downcase
 			
-	child = Child.new(child_name, child_age, child_eye_color)
-	perfect_children << child
+	perfect_children << Child.new(child_name, child_age, child_eye_color)
+#	perfect_children << child
 end
 
 perfect_children.each do |child|
@@ -83,9 +85,12 @@ perfect_children.each do |child|
  end
 
 	
-#perfect_children.each do |child|
-#child.hug_and_kiss
-#child.speak
+#perfect_children[0].hug_and_kiss
+# child = Child.new("Mary", 5, "blue")
+# child.speak
+# child.feed_pets
+# child.hug_and_kiss
+# #child.speak
 
 #child = Child.new("Asia")
 #p child
@@ -104,6 +109,4 @@ perfect_children.each do |child|
 #	else puts "you are in #{@grade}th grade! "
 # end
 #end	
-
-
 
