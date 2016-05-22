@@ -1,4 +1,6 @@
 class Santa
+	attr_reader :ethnicity 
+	attr_accessor :age, :reindeer_ranking, :gender
 
 	def initialize(gender, ethnicity)
 		puts "Initializing Santa instance"
@@ -6,53 +8,33 @@ class Santa
 		@ethnicity = ethnicity
 		@reindeer_ranking =  ["Rudolph", "Dasher", "Dancer", "Prancer", 	"Vixen", "Comet","Cupid", "Donner", "Blitzen"]
 		@age = 0
-
-	end
-#this is a getter method
-	def age
-		@age
 	end
 
-#this is a getter method
-	def ethnicity
-		@ethnicity
-	end
-
-#this is a setter method
-	def gender=(new_gender)
-		@gender = new_gender
-	end
-
-	
 	def speak(n)
 		puts "Ho, ho, ho! Haaaappy holidays!"
-
 	end
 
 
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie}!"
 
-
 	end
-#setter method to age santa by one year
-	def celebrate_birthday=(new_age)
-		@celebrate_birthday = new_age
-		new_age= @age +1
-			puts "Let's sing Happy Birthday!  Santa is #{new_age} years old today."
+
+	def celebrate_birthday
+	   @age +=1 
+			puts "Santa is #{age} years old today."
 	end
 	
 #method.  use index to move the bad reindeer to last place-rotate? 
 #select  reindeer name from list of 9 Santa is mad at.
 #move that reindeer from its current index to the last place index(8).  
 
-	def get_mad_at=(new_reindeer_ranking)
-		@get_mad_at = new_reindeer_ranking
+	def get_mad_at
+		
 		puts "Is Santa mad at:Rudolph,Dasher,Dancer, Prancer, 	Vixen, Comet, Cupid, Donner, or Blitzen?"
 		victim = gets.chomp.to_s.capitalize
-		new_reindeer_ranking = reindeer_ranking.delete(victim).push(victim)
-	puts new_reindeer_ranking
-end
+		@reindeer_ranking << @reindeer_ranking.delete(victim)
+	end
 		
 	#find victim in array and reassign his spot
 	
@@ -73,15 +55,15 @@ ethnicity_list = [
 	"Pashtun","Tajik","Arab","Hazara","Uzbek","Guar","Albanian","Greek","Asian","Andorran","Spanish","Portuguese", "Black","White","Hispanic","Armenian","Dutch","Colombian","Australian", "Bahraini","Bengali","Belarusian","Russian", "Ngalop","Mestizo","Bosni", "Malay","Chinese","Turkish", "Burman","Shan","Creole","Vietnamese","Croat","Egyptian", "Fang", "Estonian", "Scandinavian","Georgian","Finn","German","Amhara","Somali","Akan","Cafra","Makoa", "Zing","Karen","Tswana", "Undeclared"
 	]   
    
- 
+ santas = []
   facebook_gender_list.length.times do |i|
   	santas << Santa.new(facebook_gender_list[i], ethnicity_list[i])
   end
 
 santa = Santa.new(facebook_gender_list.sample, ethnicity_list.sample)
 
-santa.gets_mad_at
 
+santa.celebrate_birthday
 end
 
 
