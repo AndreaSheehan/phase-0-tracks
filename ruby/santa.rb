@@ -36,7 +36,9 @@ class Santa
 		@reindeer_ranking << @reindeer_ranking.delete(victim)
 	end
 		
-	#find victim in array and reassign his spot
+end
+
+#find victim in array and reassign his spot
 	
 		
 #	@reindeer_ranking.sample.1.time do [n]	
@@ -54,17 +56,26 @@ facebook_gender_list = [
 ethnicity_list = [
 	"Pashtun","Tajik","Arab","Hazara","Uzbek","Guar","Albanian","Greek","Asian","Andorran","Spanish","Portuguese", "Black","White","Hispanic","Armenian","Dutch","Colombian","Australian", "Bahraini","Bengali","Belarusian","Russian", "Ngalop","Mestizo","Bosni", "Malay","Chinese","Turkish", "Burman","Shan","Creole","Vietnamese","Croat","Egyptian", "Fang", "Estonian", "Scandinavian","Georgian","Finn","German","Amhara","Somali","Akan","Cafra","Makoa", "Zing","Karen","Tswana", "Undeclared"
 	]   
-   
- santas = []
-  facebook_gender_list.length.times do |i|
-  	santas << Santa.new(facebook_gender_list[i], ethnicity_list[i])
-  end
-
-santa = Santa.new(facebook_gender_list.sample, ethnicity_list.sample)
-
-
-santa.celebrate_birthday
+ 
+  
+ 3.times do
+ 	santa = Santa.new(facebook_gender_list.sample, ethnicity_list.sample)
+ 	santas << santa
 end
+
+p santas
+
+#santa.celebrate_birthday
+
+ 	
+ 	
+# facebook_gender_list.length.times do |i|
+#  	santas << Santa.new(facebook_gender_list[i], #ethnicity_list[i])
+#  end
+
+#santa = Santa.new(facebook_gender_list.sample, ethnicity_list.sample)
+#santa.celebrate_birthday
+
 
 
 # add celebrate birthday to change Santa age by 1 year
