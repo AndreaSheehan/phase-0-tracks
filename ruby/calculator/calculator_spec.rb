@@ -9,10 +9,14 @@
     # expect(<YOUR CODE>).to eq <RESULT>
 
 require_relative 'calculator'
+#makes the code fromo the calculator.rb file available to the tests below
+#as if we had cut and pasted it here
 
 describe Calculator do
   let(:calculator) { Calculator.new }
-
+#makes the creation of an instance of calculator available to each test
+#code in each block had been calculator = Caluculator.new
+#
   it "adds two integers" do
     expect(calculator.add(3,4)).to eq 7
   end

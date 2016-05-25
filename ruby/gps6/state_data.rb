@@ -1,12 +1,12 @@
-Branch: master Find file Copy pathphase-0-code/week-7/gps6/state_data.rb
-89cf0a7  on Sep 20, 2015
-@mbtomori mbtomori Rename and number GPS
-1 contributor
-RawBlameHistory     57 lines (55 sloc)  3.46 KB
 #population density is number of people per square mile as of 2012
 #this data is updated every year with estimates from a 10 year census
 
-
+#STATE DATA is a hash.  It is also in ALL CAPS and is a constant.
+#A Ruby constant is used to store a value for the duration of a Ruby 
+#programs execution.  They are declared by beginning the variable with 
+#a Capital letter and a common convention is to use UPPERCASE lettres
+#for the entire name.  MYCONSANT = "plasma physics"
+#
 STATE_DATA = {
   "Alabama" => {population_density: 94.65, population: 4822023},
   "Alaska" => {population_density: 1.1111, population: 731449},
