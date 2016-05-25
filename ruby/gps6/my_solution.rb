@@ -1,7 +1,7 @@
 # Virus Predictor
 
 # I worked on this challenge [by myself,  ].
-# We spent [2] hours on this challenge.
+# We spent [did not track] hours on this challenge.
 
 # EXPLANATION OF require_relative
 #
@@ -145,11 +145,33 @@ alaska.virus_effects
 # 
 # On your own, add a commented reflection section to yourmy_solution.rb file. Answer the following questions in your reflection:
 
-What are the differences between the two different hash syntaxes shown in the state_data file?
-What does require_relative do? How is it different from require?
-What are some ways to iterate through a hash?
-When refactoring virus_effects, what stood out to you about the variables, if anything?
-What concept did you most solidify in this challenge?
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# The STATE DATA hash assignment used a string and a rocket while the mested hash used a symbol.
+# It made sense here because the code needed to make use of the State name as a string.
+# 
+# What does require_relative do? How is it different from require? Require_relative searche for the
+# named file which will be found in the same directory relative to the one you are in. . Require will go looking across 
+# a library of directories
+# 
+#
+#What are some ways to iterate through a hash?
+#You can use .each with a block and variations of .each such as
+#.each_pair, .each_value, or .each_key   the latter two iterate through  to 
+#return the value  and the key repsectively.
+#
+#
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# 
+#We did not need to pass parameters because those are passed in upon initialization 
+#and passed through to the instance variables which were then also asssigned and 
+#made available to the methods. And if you make everything readable with the attr_reader method
+#you don't NEED to use all the instance variables.
+#
+# What concept did you most solidify in this challenge?
+# I did not fully understand scope and did not know about CONSTANT variables and 
+# their syntax or scope.  I also liked getting practice with refactoring and seeing how
+# the pieces work together.  I would actually really like some more like this.
+# I am still shaky on that hashy hash.... 
 
 # 
 # 
