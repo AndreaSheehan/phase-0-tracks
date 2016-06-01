@@ -20,7 +20,7 @@
  function reverse(str) {
  	var reverseWord = ''
 
- 	for (var i = str.length -1; i >= 0; i--) 
+ 	for (var i = str.length -1 ; i >= 0; i--) 
 	// reverseWord = reverseWord += str[i];
 		reverseWord += str[i];
 		return reverseWord;
