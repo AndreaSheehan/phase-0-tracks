@@ -29,3 +29,6 @@
 
  // Driver code:
 console.log(reverse("hello"));
+var newWord = reverse("martian");
+console.log(newWord)
+if ("apple" != "orange")console.log(newWord);
