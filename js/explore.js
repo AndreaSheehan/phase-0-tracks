@@ -28,4 +28,4 @@
  }
 
  // Driver code:
-console.log(reverse("hello"));// Driver code:
+console.log(reverse("hello"));
