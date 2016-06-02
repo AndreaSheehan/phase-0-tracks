@@ -30,7 +30,7 @@ this.model = model
 this.color = color
 this.type = type
 
-this.drive = function() { console.log("ZOOOOOOOOOM"); };
+this.drive = function() { console.log("And you're off!"); };
 console.log("Your car is ready");
 
 }
@@ -39,4 +39,8 @@ console.log("Let's design your new ride...");
 var newCar = new Car("Ferrari", "red", "sports");
 console.log(newCar);
 console.log("This car can move:");
-newCar.drive(); 
+
+console.log("Now you're set, how about a family car...");
+var familyCar = new Car("Toyota", "gray", "minivan");
+console.log(familyCar);
+console.log("This car can hold eight!:");
