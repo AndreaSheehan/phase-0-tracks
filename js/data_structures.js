@@ -21,3 +21,20 @@ for (var i = 0; i < colors.length; i++) {
 console.log(horsesColors);
 
 
+//write a constructor function (like Classes in Ruby) for a car.
+// Give it a few different properties of various data types, 
+// including at least one function. 
+//Demonstrate that your function works by creating a few cars with it.
+function Car(model, color, type) {
+this.model = model
+this.color = color
+this.type = type
+
+this.drive = function() {console.log("ZOOOOOOOOOM"); };
+console.log("Your car is ready");
+
+}
+
+console.log("Let's design your new ride...");
+var newCar = new Car("Ferrari", "red", "sports");
+console.log(newCar);
