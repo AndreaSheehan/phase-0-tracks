@@ -1,20 +1,12 @@
+//RELEASE 0
+//
 //describe: longestWord() function
 //function will takes an array of words or phrases and returns the longest
 //word or phrase in the array.
 //expect function["vampire", "zombie", "werewolf"]
-////>  "werewolf"
-///
-///notes:
-///var abc = "abc";
-///cvar abc = "abc"
-// console.log(abc.length);
-//> 3
-// var word = ""
-// console.log(word.length);
-//> 0
-///
-///
-///
+///>  "werewolf"
+
+//
 //function needs:
 // to accept an array of strings as input.
 // iterate through the array
@@ -24,9 +16,6 @@
 // compare subsequent numbers of characters to stored variable
 // when it is done iterating the variable will contain the string with the greatest value.  
 // (possibly there was a way to do this with forEach, indexing and Math.max this seems like it will work though.
-//var creatures = ["vampire", "zombie", "werewolf"]
-//Oops. Save that for driver code; this is a FUNCTION my words should be generic but descriptive
-
 
 
 function longestString(array) {
@@ -49,13 +38,8 @@ var answer = (longestString(["vampire", "zombie", "werewolf"]))
 console.log(answer)
 
 
-
-
-// function longestString(array) {
-//   var longest = "";
-
-
-//  notes from office hours:
+//  Further exploration for in also works:
+//  
 // for (var i in array) {
 //        if (array[i].length > longest.length) {
 //          longest = array[i]
@@ -65,14 +49,16 @@ console.log(answer)
 //       return longest
 // }
 
-
 // var answer = (longestString(["vampire", "zombie", "werewolf"]))
-
+// 
 // console.log(answer)
 
 //Describe:
 //function Similar 
-//compare
+
+
+//---------------------------------------------------------
+Release 1
 
 //expect
 //var sally = { hairColor: 'brown', name: 'Sally', age: 35 }
@@ -82,20 +68,45 @@ console.log(answer)
 
 
 
-the purpose of this thing is to compare two objects
-input: 2 objects
-output: true or false
+// the purpose of this thing is to compare two objects
+// input: 2 objects
+// output: true or false
 
-look at first key of first object
-  compare to first key of second object
-  are they the same?
-  if so, compare the values
-    are they the same?
-    if so, return true
-  if not compare to second key of second object and so on
+// look at first key of first object
+//   compare to first key of second object
+//   are they the same?
+//   if so, compare the values
+//     are they the same?
+//     if so, return true
+//   if not compare to second key of second object and so on
 
 
-...if i get through all possible comparisons and have found nothing, return false
+// ...if i get through all possible comparisons and have found nothing, return false
+// var steven = {name: "Steven", age: 54};
+// var tamir =  {age: 54,name: "Tamir",};
+
+  function findMatch(obj1, obj2) {
+  for(var firstKey in obj1) {
+    for(var secondKey in obj2) {
+      if(obj1[firstKey] == obj2[secondKey]){
+        return true;
+      };
+    };
+  };
+  
+  return false;
+};
+ var steven = {name: "Steven", age: 54};
+ var tamir =  {age: 54,name: "Tamir",};
+ var nada = {}
+console.log(findMatch(steven,tamir));
+console.log(findMatch(steven, nada));
+
+//--------------------------------------------------
+//Practice with objects: 
+//var sally = { hairColor: 'brown', name: 'Sally', age: 35 }
+//var bobby = { name: 'Bobby', age: 24, hairColor: 'brown' }
+// => true
 
 // function Person(name, age, hairColor) {
 //   this.name = name;
