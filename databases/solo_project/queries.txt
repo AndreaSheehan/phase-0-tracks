@@ -1,0 +1,81 @@
+
+Display the information in one table (i put both tables).
+SELECT * FROM students
+   ...> ;
+    1|Jasmine Caruso|3|1
+    2|Jerome Martin|2|2
+    3|Sarah Ucuzoglu|5|3
+    4|Anna Mattick|3|1
+
+sqlite> SELECT * FROM teachers
+   ...> ;
+    1|Talvac
+    2|Meyers
+    3|Robbins
+    sqlite>
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+
+    qlite> UPDATE students SET name = "Samuel Martin" WHERE name = "Jerome Martin";
+    sqlite> SELECT * FROM students WHERE name = "Samuel Martin";
+    2|Samuel Martin|2|2
+    sqlite>
+
+Display the information in both tables using one query:
+sqlite> SELECT * FROM students, teachers;
+    1|Jasmine Caruso|3|1|1|Talvac
+    1|Jasmine Caruso|3|1|2|Meyers
+    1|Jasmine Caruso|3|1|3|Robbins
+    2|Jerome Martin|2|2|1|Talvac
+    2|Jerome Martin|2|2|2|Meyers
+    2|Jerome Martin|2|2|3|Robbins
+    3|Sarah Ucuzoglu|5|3|1|Talvac
+    3|Sarah Ucuzoglu|5|3|2|Meyers
+    3|Sarah Ucuzoglu|5|3|3|Robbins
+    4|Anna Mattick|3|1|1|Talvac
+    4|Anna Mattick|3|1|2|Meyers
+    4|Anna Mattick|3|1|3|Robbins
+sqlite>
+Display a narrower selection of columns:
+    sqlite> SELECT * FROM students, teachers  WHERE grade_level = 3;
+    4|Anna Mattick|3|1|1|Talvac
+    1|Jasmine Caruso|3|1|1|Talvac
+    4|Anna Mattick|3|1|2|Meyers
+    1|Jasmine Caruso|3|1|2|Meyers
+    4|Anna Mattick|3|1|3|Robbins
+    1|Jasmine Caruso|3|1|3|Robbins
+sqlite>
+Delete an item that meets some condition:
+    DELETE FROM teachers WHERE name = "Robbins";
+    sqlite> SELECT * FROM teachers
+   ...> ;
+    1|Talvac
+    2|Meyers
+
+ADDITIONAL QUERIES:
+    sqlite> INSERT INTO  teachers (name) VALUES ("Stevens");
+    sqlite> SELECT * FROM teachers,students WHERE students.teacher_id = teachers.id;
+    1|Talvac|1|Jasmine Caruso|3|1
+    2|Meyers|2|Samuel Martin|2|2
+    3|Stevens|3|Sarah Ucuzoglu|5|3
+    1|Talvac|4|Anna Mattick|3|1
+    sqlite>
+    LEFT JOIN
+
+    qlite> SELECT teachers.name, students.name from students LEFT JOIN teachers ON students.teacher_id = teachers.id;
+    Talvac|Jasmine Caruso
+    Meyers|Samuel Martin
+    Stevens|Sarah Ucuzoglu
+    Talvac|Anna Mattick
+    sqlite>
+
+    ELECT teachers.name, students.name from students RIGHT JOIN teachers ON students.teacher_id = teachers.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite>
+
+sqlite> SELECT * FROM students ORDER by grade_level;
+2|Samuel Martin|2|2
+1|Jasmine Caruso|3|1
+4|Anna Mattick|3|1
+3|Sarah Ucuzoglu|5|3
+sqlite>
