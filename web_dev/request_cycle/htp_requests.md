@@ -45,4 +45,15 @@ GET - Requests data from a specified resource
 POST - Submits data to be processed to a specified resource.  We used this while making forms in our html sites.
 
 
+COOKIE
+
+A message given to a Web browser by a Web server. The browser stores the message in a text file. The message is sent back to the server each time the browser requests a page from the server. 
+Helps pages load quickly as you are "recognized"  
+Helps target ads.
+
+When you fill out a form, this information is packaged into a cookie and sent to your Web browser which stores it for later use. The next time you go to the same Web site, your browser will send the cookie to the Web server. The server can use this information to present you with custom Web pages. So, for example, instead of seeing just a generic welcome page you might see a welcome page with your name on it.
+
+session cookie only stays with you for the amount of time you are on the site.  goes away when you close your browser.
+
+persistent cookie is  a permanent, stored cookie.  It is on a user hard drive until it expires (persistent cookies are set with expiration dates) or until the user deletes the cookie. Persistent cookies are used to collect identifying information about the user, such as Web surfing behavior or user preferences for a specific Web site.
 
