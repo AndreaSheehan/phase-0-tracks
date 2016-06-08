@@ -57,3 +57,27 @@ session cookie only stays with you for the amount of time you are on the site.  
 
 persistent cookie is  a permanent, stored cookie.  It is on a user hard drive until it expires (persistent cookies are set with expiration dates) or until the user deletes the cookie. Persistent cookies are used to collect identifying information about the user, such as Web surfing behavior or user preferences for a specific Web site.
 
+
+WEB SERVERS
+
+Big or small, web servers have the following characteristics:
+
+It is a computer, or it is a walled-off chunk of memory pretending to be a computer, or it is a program on a computer.
+It is set up to respond to HTTP requests (or even just one specific HTTP request for a specific URL).
+It can perform one or more of the below tasks:
+    Send a file to a browser (usually HTML, CSS, JS, and videos/images), or send a listing of the contents of a folder.
+    
+    Look up data in a database, and interpolate that data into a template. For instance, when you load someone's Facebook profile, the Facebook web server looks up that person's information in some kind of database, then loads that data into the generic Facebook profile template, similar to how you might use Ruby to interpolate a variable into a string.
+    
+    Perform a calculation or execute an algorithm, like generating a list of directions from one location to another, for the purpose of responding to HTTP requests with that calculation result.
+
+
+MANIPULATING THE DOM - SCRIPTING ONCE PAGE IS LOADED BY SERVER
+Animate text and images in the document
+Embed a ticker that refreshes the contecnt of the pge
+add a form to caputre input
+make the buttons cooler with roolovers or drop downs
+make mini browser based games.
+
+
+
