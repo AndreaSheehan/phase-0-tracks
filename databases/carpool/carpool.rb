@@ -28,7 +28,7 @@
 
 require 'sqlite3'
 require 'faker'
-
+#should have named the database carpool!
 db = SQLite3::Database.new("children.db")
 
 create_table_cmd = <<-SQL
@@ -57,24 +57,27 @@ end
 #
 #
 #db = SQLite3::Database.new("children.db")
+db = SQLite3::Database.new("children.db")
 
 create_table_cmd = <<-SQL
 CREATE TABLE IF NOT EXISTS activities(
 	id INTEGER PRIMARY KEY,
 	activity VARCHAR(255),
 	location VARCHAR(255),
-	weekday VARCHAR(255),
+	weekday VARCHAR(255)
 	
 )
 SQL
 
 db.execute(create_table_cmd)
-
-def create_activity(db, activity, location, weekday)
-	 db.execute("INSERT INTO activities (activity, location, weekday) 
-	 	VALUES (?, ?, ?)", [activity, location, weekday])
-end
-#
+db.execute("INSERT INTO activities (activity, location, weekday) VALUES ('Soccer', 'Avenel Park','Mondays')")
+db.execute("INSERT INTO activities (activity, location, weekday) VALUES ('Karate', 'Potomac Center','Wednesdays')")
+db.execute("INSERT INTO activities (activity, location, weekday) VALUES ('Gymnastics', 'Dynamite Rockville','Fridays')")
+# # def create_activity(db, activity, location, weekday)
+# # db.execute("INSERT INTO activities (activity, location, weekday) 
+# 	 	VALUES (?, ?, ?)", [activity, location, weekday])
+# end
+# #
 #
 #
 #
