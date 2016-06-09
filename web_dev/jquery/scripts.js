@@ -18,4 +18,4 @@ list.appendChild(newItemLast);
 
 // var firstItem = document.getElementByID("one");
 // var itemContent = firstItem.innerHTML;
-// firstItem.innerHTML = '<a href=\"http://www.foodmatters.com/article/25-powerful-reasons-to-eat-bananas\">' + itemContent + '</a>';
+// firstItem.innerHTML = "<a href='http://www.foodmatters.com/article/25-powerful-reasons-to-eat-bananas'> + itemContent + '</a>";
