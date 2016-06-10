@@ -82,7 +82,7 @@ get '/:number_1/plus/:number_2' do
  #perform addition and return result as string
   result = number_1 + number_2
   result.to_s
-  # "The result is #{result}"
+  # "This is the result: #{result}"
 
  # "nice job #{number1} and #{number2}"
 end 
